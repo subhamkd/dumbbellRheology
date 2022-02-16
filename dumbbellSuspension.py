@@ -33,12 +33,12 @@ class suspension:
 def eq_steady(vars, b, De=1, s=0, e=0):
     #b=params
     Qxx,Qxy,Qxz,Qyy,Qyz,Qzz = vars
-    eq1 = 2*Qxy*s + 2*e*Qxx +(1/De)*(1-b*Qxx/(b-(Qxx+Qyy+Qzz)))
-    eq2 = Qyy*s+(1/De)*(-b*Qxy/(b-(Qxx+Qyy+Qzz)))
-    eq3 = Qyz*s+(1/De)*(-b*Qxz/(b-(Qxx+Qyy+Qzz)))
+    eq1 = 2*Qxy*s - e*Qxx +(1/De)*(1-b*Qxx/(b-(Qxx+Qyy+Qzz)))
+    eq2 = Qyy*s - e*Qxy +(1/De)*(-b*Qxy/(b-(Qxx+Qyy+Qzz)))
+    eq3 = Qyz*s + 0.5*e*Qxz +(1/De)*(-b*Qxz/(b-(Qxx+Qyy+Qzz)))
     eq4 = -e*Qyy+(1/De)*(1-b*Qyy/(b-(Qxx+Qyy+Qzz)))
-    eq5 = (1/De)*(-b*Qyz/(b-(Qxx+Qyy+Qzz)))
-    eq6 = -e*Qzz+(1/De)*(1-b*Qzz/(b-(Qxx+Qyy+Qzz)))
+    eq5 = 0.5*e*Qyz+(1/De)*(-b*Qyz/(b-(Qxx+Qyy+Qzz)))
+    eq6 = 2*e*Qzz+(1/De)*(1-b*Qzz/(b-(Qxx+Qyy+Qzz)))
     return [eq1,eq2,eq3,eq4,eq5,eq6]
 
 def solve_QQ_eq(eq, b, De=1, s=0, e=0):
