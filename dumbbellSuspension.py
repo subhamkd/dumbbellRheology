@@ -22,11 +22,11 @@ class suspension:
 		print(self.QQ_eq)
 
 	def shear(self,s): #apply a simple x-direction shear with shear rate s
-		De=self.t_rel*s
+		De=self.t_rel
 		self.QQ = solve_QQ_eq(eq_steady,self.b,De,s)
 	
 	def extension(self,e): #
-		De=self.t_rel*e
+		De=self.t_rel
 		self.QQ = solve_QQ_eq(eq_steady,self.b,De,e)
 
 
