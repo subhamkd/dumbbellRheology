@@ -20,10 +20,7 @@ class suspension:
 	def eq_state(self):
 		print(self.QQ_eq)
 
-
-	#def shear(s,t=0): #apply a simple x-direction shear with shear rate s
-
-
+	#def shear(self,s,t=0): #apply a simple x-direction shear with shear rate s
 
 
 	#def extension(e,t=0): #
