@@ -5,7 +5,7 @@ University of Calgary
 
 '''
 
-import numpy as np
+#import numpy as np
 from scipy.optimize import fsolve
 #from scipy.integrate import odeint
 
