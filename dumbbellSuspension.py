@@ -7,7 +7,7 @@ University of Calgary
 
 import numpy as np
 from scipy.optimize import fsolve
-from scipy.integrate import odeint
+#from scipy.integrate import odeint
 
 class suspension:
 	"""docstring for suspension"""
