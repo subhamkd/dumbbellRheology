@@ -25,7 +25,7 @@ A.shear(100)
 The `extension(e)` method applies a specified steady biaxial(for negative `e`) or uniaxial(for positive `e`) elongation on the suspension.
 
 ```python
-A.shear(100)
+A.extension(100)
 ```
 
 The `QQ()` method returns the current conformation of the dumbbells in the suspension
